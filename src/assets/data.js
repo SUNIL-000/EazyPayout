@@ -1,5 +1,10 @@
 
 export const avatar = "https://img.freepik.com/free-photo/3d-render-little-boy-with-eyeglasses-blue-shirt_1142-50994.jpg?t=st=1722778559~exp=1722782159~hmac=6da260645f6e13efd77dc6cd291ba06781544b60fd108f63b65313a1c6d07921&w=740"
+export const shop = "https://img.freepik.com/free-vector/online-shopping-concept-landing-page_52683-22153.jpg?t=st=1722778983~exp=1722782583~hmac=ebbbb39affbe2014e183c32e05ae9ddd562b176cfe8726c28e0b4b963e369a9a&w=996"
+export const criminal = "https://img.freepik.com/free-photo/gavel-with-books-old-wooden-desk_93675-129543.jpg?t=st=1722771418~exp=1722775018~hmac=d20f7841c9d1ca2df847a9f4699da83c1c8ea29e8bcf450aad8b9b909eda43a2&w=996"
+export const bill = "https://img.freepik.com/free-vector/invoice-concept-illustration_114360-2411.jpg?t=st=1722771312~exp=1722774912~hmac=7df166e7893301735307c91115383cf625816d5caad2e32d56724a9376192436&w=740"
+
+
 export const skill = [
     {
         title: "Languages",
@@ -101,17 +106,17 @@ export const skill = [
 export const project = [
     {
         name: "shopshere",
-        url: '/shop.jpg',
+        url: shop,
         link: "https://github.com/SUNIL-000/Shopshere_frontend"
     },
     {
         name: "E-Billing Web App",
-        url: '/bill.jpg',
+        url: bill,
         link: "https://github.com/SUNIL-000/Shopshere_frontend"
     },
     {
         name: "criminal management system",
-        url: '/crime.jpg',
+        url: criminal,
         link: "https://github.com/SUNIL-000/CMS"
     },
     {
