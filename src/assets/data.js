@@ -3,7 +3,7 @@ export const avatar = "https://img.freepik.com/free-photo/3d-render-little-boy-w
 export const shop = "https://img.freepik.com/free-vector/online-shopping-concept-landing-page_52683-22153.jpg?t=st=1722778983~exp=1722782583~hmac=ebbbb39affbe2014e183c32e05ae9ddd562b176cfe8726c28e0b4b963e369a9a&w=996"
 export const criminal = "https://img.freepik.com/free-photo/gavel-with-books-old-wooden-desk_93675-129543.jpg?t=st=1722771418~exp=1722775018~hmac=d20f7841c9d1ca2df847a9f4699da83c1c8ea29e8bcf450aad8b9b909eda43a2&w=996"
 export const bill = "https://img.freepik.com/free-vector/invoice-concept-illustration_114360-2411.jpg?t=st=1722771312~exp=1722774912~hmac=7df166e7893301735307c91115383cf625816d5caad2e32d56724a9376192436&w=740"
-
+export const youtube ="https://img.freepik.com/free-photo/pile-3d-play-button-logos_1379-880.jpg?t=st=1722779695~exp=1722783295~hmac=7e5d053b8510627cecac08feb02de7033c5f9f7f967509a844055da01c5bf4c3&w=996"
 
 export const skill = [
     {
@@ -121,7 +121,7 @@ export const project = [
     },
     {
         name: "Youtube clone UI",
-        url: '/you.jpg',
+        url: youtube,
         link: "https://github.com/SUNIL-000/Youtube-Clone-React"
     },
 ]
