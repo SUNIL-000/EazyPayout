@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoMdDownload } from "react-icons/io";
+import { avatar } from '../assets/data';
 const Homepage = () => {
     return (
         <section>
@@ -17,7 +18,7 @@ const Homepage = () => {
  
                 {/* images part  */}
                 <div className='order-1 md:order-2 ' >
-                    <img src="/avatar.jpg" height={300} width={300} className='rounded-full shadow-md' alt="avatar" />
+                    <img src={avatar} height={300} width={300} className='rounded-full shadow-md' alt="avatar" />
                 </div>
             </div>
         </section>

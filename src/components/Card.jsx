@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { avatar } from "../assets/data"
 
 const Card = () => {
     const data = [
@@ -21,7 +22,7 @@ const Card = () => {
 
             <div className=" m-3 bg-[#f4f6f6] flex  flex-col items-center px-12 py-7 rounded-xl shadow-2xl ">
                 <div>
-                    <img src="/avatar.jpg" height={120} width={120} className='rounded-full shadow-3xl mb-4 -my-16  border-2' alt="avatar" />
+                    <img src={avatar} height={120} width={120} className='rounded-full shadow-3xl mb-4 -my-16  border-2' alt="avatar" />
                 </div>
 
                 <div className="text-center mb-5 pb-2 rounded-sm border-gray-300  border-b-4 ">

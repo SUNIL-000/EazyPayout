@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ImCross } from "react-icons/im";
 import { Link } from 'react-scroll';
+import { avatar } from '../assets/data';
 const Navbar = () => {
 
     const [isOn, setisOn] = useState(false)
@@ -27,7 +28,7 @@ const Navbar = () => {
                    
                    {/* logo div */}
                     <div className='flex justify-center items-center '>
-                        <img src="/avatar.jpg" height={50} width={50} alt="name" className='rounded-full object-cover' />
+                        <img src={avatar} height={50} width={50} alt="name" className='rounded-full object-cover' />
                     </div>
                     {/* menu items  */}
                     <div className=' md:flex hidden  md:visible  justify-center items-center gap-5 '>

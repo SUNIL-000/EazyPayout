@@ -1,5 +1,5 @@
 
-
+export const avatar = "https://img.freepik.com/free-photo/3d-render-little-boy-with-eyeglasses-blue-shirt_1142-50994.jpg?t=st=1722778559~exp=1722782159~hmac=6da260645f6e13efd77dc6cd291ba06781544b60fd108f63b65313a1c6d07921&w=740"
 export const skill = [
     {
         title: "Languages",
@@ -102,21 +102,21 @@ export const project = [
     {
         name: "shopshere",
         url: '/shop.jpg',
-        link:"https://github.com/SUNIL-000/Shopshere_frontend"
-    }, 
+        link: "https://github.com/SUNIL-000/Shopshere_frontend"
+    },
     {
         name: "E-Billing Web App",
         url: '/bill.jpg',
-        link:"https://github.com/SUNIL-000/Shopshere_frontend"
-    }, 
+        link: "https://github.com/SUNIL-000/Shopshere_frontend"
+    },
     {
         name: "criminal management system",
         url: '/crime.jpg',
-        link:"https://github.com/SUNIL-000/CMS"
-    }, 
+        link: "https://github.com/SUNIL-000/CMS"
+    },
     {
         name: "Youtube clone UI",
         url: '/you.jpg',
-        link:"https://github.com/SUNIL-000/Youtube-Clone-React"
+        link: "https://github.com/SUNIL-000/Youtube-Clone-React"
     },
 ]
