@@ -30,11 +30,11 @@ const Card = () => {
                     <p className="text-3xl text-[#914F1E]">FullStack Developer</p>
                 </div>
                 <hr />
-                <div className="flex flex-row md:gap-4 relative bottom-0">
+                <div className="flex flex-row gap-2 md:gap-4 relative bottom-0">
 
                     {
                         data?.map((data, index) => {
-                            return <Link to={data?.src} key={index} ><img src={data.link} height={30} width={30} alt="facebook" /></Link>
+                            return <Link to={data?.src} key={index} ><img src={data.link} height={30} width={30} alt="socialicon" /></Link>
                         })
                     }
 
