@@ -45,7 +45,7 @@ const Navbar = () => {
                 </div>
 
                         {/* mobile menu  */}
-                <div className={`bg-[#f5efee] rounded-md w-full ${isOn ? "visible" : "hidden"}  flex flex-col relative  `}>
+                <div className={`bg-[#f5efee] md:hidden rounded-md w-full ${isOn ? "visible" : "hidden"}  flex flex-col relative  `}>
 
                     {tags.map((item, index) => {
                         return <Link to={item.link} smooth={500} key={index} className='uppercase list-none text-[#914F1E] hover:text-[#91501ecd] hover:border-b-2 cursor-pointer transition hover:border-[#914F1E]   font-bold mx-auto p-4'>
