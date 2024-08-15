@@ -1,32 +1,35 @@
-import React, { useState } from 'react'
+import { useRef, useState } from 'react'
 import { ImCross } from "react-icons/im";
 import { Link } from 'react-scroll';
-import { avatar } from '../assets/data';
+import { avatar, tags } from '../assets/data';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 const Navbar = () => {
-
     const [isOn, setisOn] = useState(false)
+    const navbar = useRef()
+    const mobileNav = useRef()
 
-    const tags = [
-        {
-            name: "home",
-            link: "home"
-        }, {
-            name: "About me",
-            link: "about"
-        }, {
-            name: "project",
-            link: "project"
-        }, {
-            name: "skill",
-            link: "skill"
-        }
-    ]
+    const { contextSafe } = useGSAP();
+    useGSAP(() => {
+        gsap.set(navbar.current, { y: '-100%' });
+
+        gsap.to(navbar.current, {
+            y: 0,
+            duration: 1,
+            delay: 0.4,
+            ease: 'power3.out'
+        });
+    })
+
+   
+
+
     return (
         <>
-            <nav>
-                <div className='flex bg-[#f5efee] w-auto shadow-md rounded-md m-1 p-3 md:px-32 justify-between items-center'>
-                   
-                   {/* logo div */}
+            <nav >
+                <div ref={navbar} className='flex bg-[#f5efee] w-auto shadow-md rounded-md m-1 p-3 md:px-32 justify-between items-center'>
+
+                    {/* logo div */}
                     <div className='flex justify-center items-center '>
                         <img src={avatar} height={50} width={50} alt="name" className='rounded-full object-cover' />
                     </div>
@@ -44,11 +47,11 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                        {/* mobile menu  */}
-                <div className={`bg-[#f5efee] md:hidden rounded-md w-full ${isOn ? "visible" : "hidden"}  flex flex-col relative  `}>
+                {/* mobile menu  */}
+                <div  className={`bg-[#f5efee] md:hidden rounded-md w-full ${isOn ? "visible" : "hidden"}  flex flex-col relative  `}>
 
                     {tags.map((item, index) => {
-                        return <Link to={item.link} smooth={500} key={index} className='uppercase list-none text-[#914F1E] hover:text-[#91501ecd] hover:border-b-2 cursor-pointer transition hover:border-[#914F1E]   font-bold mx-auto p-4'>
+                        return <Link to={item.link} smooth={400} key={index} className='uppercase list-none text-[#914F1E] hover:text-[#91501ecd] hover:border-b-2 cursor-pointer transition hover:border-[#914F1E]   font-bold mx-auto p-4'>
                             {item?.name}
                         </Link>
                     })}
@@ -61,4 +64,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar 

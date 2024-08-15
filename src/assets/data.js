@@ -125,3 +125,18 @@ export const project = [
         link: "https://github.com/SUNIL-000/Youtube-Clone-React"
     },
 ]
+
+export const tags = [
+    {
+        name: "home",
+        link: "home"
+    }, {
+        name: "About me",
+        link: "about"
+    }, {
+        name: "project",
+        link: "project"
+    }, {
+        name: "skill",
+        link: "skill"
+    }]

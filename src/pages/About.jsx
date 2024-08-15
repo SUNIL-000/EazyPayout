@@ -13,13 +13,13 @@ const About = () => {
 
 
                     {/* work experience  */}
-                    <p>
+                    <div>
 
                     <div className="mt-4">
 
                         <h1 className="text-xl text-[#914F1E] underline">Work experience</h1>
                         <h3 className=" text-[#503521]">DatStek pvt ltd</h3>
-                        <li className=" text-[#322012bc]">Fullstack developer Itern</li>
+                        <li className=" text-[#322012bc]">Fullstack developer Intern</li>
                     </div>
 
                     <div className="mt-4">
@@ -30,7 +30,7 @@ const About = () => {
                         <h3 className="text-[#503521]" >Ravenshaw University</h3>
                         <li className=" text-[#322012bc]" >Information Technology and management (8.68 sgpa) </li>
                     </div>
-                    </p>
+                    </div>
 
 
                 </div>
