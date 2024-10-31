@@ -31,9 +31,9 @@ const Homepage = () => {
                 </div>
 
                 {/* images part  */}
-                <div className='order-1 md:order-2 relative' >
+                <div className='order-1 md:order-2 relative ' >
                     <Lottie animationData={hero}
-                        className='h-[15rem] md:h-[30rem] -mt-20  md:-mt-16' />
+                        className='h-[15rem] md:h-[30rem] -mt-18  md:-mt-16' />
                 </div>
             </div>
         </section>
