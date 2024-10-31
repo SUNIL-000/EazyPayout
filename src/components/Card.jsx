@@ -29,7 +29,7 @@ const Card = () => {
 
                 <div className="text-center mb-5 pb-2 rounded-sm border-gray-300  border-b-4 ">
                     <p className="text-2xl text-[#4b3524a8] ">Sunil Kumar Sahoo</p>
-                    <p className="text-4xl md:text-5xl bg-gradient-to-tr  from-[#e26015]  to-[#e1be7e] bg-clip-text text-transparent">FullStack Developer</p>
+                    <p className="text-2xl md:text-5xl bg-gradient-to-tr  from-[#e26015]  to-[#e1be7e] bg-clip-text text-transparent">FullStack Developer</p>
                 </div>
                 <hr />
                 <div className="flex flex-row gap-2 md:gap-4 relative bottom-0">
