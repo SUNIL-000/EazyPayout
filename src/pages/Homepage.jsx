@@ -19,7 +19,7 @@ const Homepage = () => {
 
                 {/* introduction part  */}
                 <div className='md:w-1/2 order-2 md:order-1 px-10 md:px-0  z-10'>
-                    <h1 className='text-4xl md:text-7xl my-3 font-bold'>Hi there I'm <span className='bg-gradient-to-br  from-[#d26729] via-[#f4a272]  to-[white]  bg-clip-text text-transparent  '>Sunil Kumar</span></h1>
+                    <h1 className='text-3xl md:text-7xl my-3 font-bold'>Hi there I'm <span className='bg-gradient-to-br  from-[#d26729] via-[#f4a272]  to-[white]  bg-clip-text text-transparent  '>Sunil Kumar</span></h1>
                     <p className=' text-xl md:text-2xl text-[#322012e9] text-wrap text-justify'>A passionate and versatile full-stack developer with a knack for creating dynamic, responsive,
                         and user-friendly web applications.
                         With experience in both front-end and back-end development,
