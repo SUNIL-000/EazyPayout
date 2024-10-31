@@ -21,20 +21,21 @@ const Navbar = () => {
         });
     })
 
-   
+
 
 
     return (
         <>
             <nav >
-                <div ref={navbar} className='flex bg-[#f5efee] w-auto shadow-md rounded-md m-1 p-3 md:px-32 justify-between items-center'>
+                <div ref={navbar} className='flex  bg-[#f5efee] w-auto shadow-md rounded-md m-1 p-3 md:px-32 justify-between items-center'>
 
                     {/* logo div */}
                     <div className='flex justify-center items-center '>
                         <img src={avatar} height={50} width={50} alt="name" className='rounded-full object-cover' />
                     </div>
                     {/* menu items  */}
-                    <div className=' md:flex hidden  md:visible  justify-center items-center gap-5 '>
+                    <div className=' md:flex hidden z-30 justify-center items-center gap-5 '>
+                        <h1>hii</h1>
                         {tags.map((item, index) => {
                             return <Link to={item.link} smooth={500} key={index} className='uppercase  hover:text-[#91501ecd] hover:border-b-2  transition hover:border-[#914F1E]  cursor-pointer list-none font-bold text-[#914F1E] '>
                                 {item?.name}
@@ -48,7 +49,7 @@ const Navbar = () => {
                 </div>
 
                 {/* mobile menu  */}
-                <div  className={`bg-[#f5efee] md:hidden rounded-md w-full ${isOn ? "visible" : "hidden"}  flex flex-col relative  `}>
+                <div className={`bg-[#f5efee] md:hidden rounded-md w-full ${isOn ? "visible" : "hidden"}  flex flex-col relative  `}>
 
                     {tags.map((item, index) => {
                         return <Link to={item.link} smooth={400} key={index} className='uppercase list-none text-[#914F1E] hover:text-[#91501ecd] hover:border-b-2 cursor-pointer transition hover:border-[#914F1E]   font-bold mx-auto p-4'>

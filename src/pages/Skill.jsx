@@ -9,7 +9,7 @@ const Skill = () => {
                 {skill.map((data, index) => (
                     <div key={index} className={`mt-2 w-auto  p-6 flex flex-col mx-auto justify-start items-start`}>
                         <h1 className=' text-2xl   text-[#000000d4] '>{data.title}</h1>
-                        <div className=' grid grid-cols-2 items-start md:grid-cols-4 gap-2'>
+                        <div className=' grid grid-cols-2 place-items-start md:grid-cols-4 gap-2'>
                             {data.skills.map((item, subIndex) => (
                                 <span key={subIndex} className='flex gap-1 justify-center items-start rounded-md p-2  text-black '>
                                     <img src={item.url} alt={item?.name} height={30} width={30} />

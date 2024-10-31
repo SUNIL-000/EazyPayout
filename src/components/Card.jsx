@@ -20,14 +20,16 @@ const Card = () => {
     return (
         <>
 
-            <div className=" m-3 bg-[#f4f6f6] flex  flex-col items-center px-12 py-7 rounded-xl shadow-2xl ">
+            <div className=" m-3  flex  flex-col items-center px-12 py-7 rounded-xl shadow-2xl ">
                 <div>
-                    <img src={avatar} height={120} width={120} className='rounded-full shadow-3xl mb-4 -my-16  border-2' alt="avatar" />
+                    <img src={avatar}
+                     loading="lazy" height={120} width={120} className='rounded-full shadow-2xl mb-4 -my-16  border-2' 
+                     alt="avatar" />
                 </div>
 
                 <div className="text-center mb-5 pb-2 rounded-sm border-gray-300  border-b-4 ">
-                    <p className="text-xl text-[#4b3524a8] ">Sunil Kumar Sahoo</p>
-                    <p className="text-3xl text-[#914F1E]">FullStack Developer</p>
+                    <p className="text-2xl text-[#4b3524a8] ">Sunil Kumar Sahoo</p>
+                    <p className="text-4xl md:text-5xl bg-gradient-to-tr  from-[#e26015]  to-[#e1be7e] bg-clip-text text-transparent">FullStack Developer</p>
                 </div>
                 <hr />
                 <div className="flex flex-row gap-2 md:gap-4 relative bottom-0">

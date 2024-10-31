@@ -11,8 +11,8 @@ const ProjectCard = ({data}) => {
 
             <h4 className='text-xl mt-2 capitalize'>{data?.name} </h4>
             <div className='flex  gap-3'>
-                <Link to={data?.link}  className='bg-[#d89766e9] hover:bg-[#d57d3a] transition-all rounded-full px-4 py-1 '>Demo</Link>
-                <Link to={data?.link} className='bg-[#d89766e9] hover:bg-[#d57d3a] transition-all rounded-full px-4 py-1 '>Link</Link>
+                <Link to={data?.link}  className='bg-gradient-to-tr  from-[#FBAB7E]  to-[white] hover:from-[#d55e18] transition-all rounded-full px-4 py-1 '>Demo</Link>
+                <Link to={data?.link} className='bg-gradient-to-tr  from-[#FBAB7E]  to-[white] hover:from-[#d55e18] transition-all rounded-full px-4 py-1 '>Link</Link>
             </div>
 
         </div>
