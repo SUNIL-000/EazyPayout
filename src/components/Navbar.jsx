@@ -51,7 +51,8 @@ const Navbar = () => {
                 </div>
 
                 {/* mobile menu  */}
-                <div className={`bg-[#f5efee] absolute z-20 min-h-screen md:hidden  w-full ${isOn ? "block" : "hidden"}  flex flex-col  gap-10 flex-wrap`}>
+                <div className={`bg-[#f5efee] absolute z-20  min-h-screen md:hidden
+                  w-full ${isOn ? "block" : "hidden"}  flex flex-col  gap-10 flex-wrap`}>
 
                     {tags.map((item, index) => {
                         return <Link to={item.link} onClick={()=>{setisOn(false)}} smooth={400} key={index} className='uppercase list-none text-[#914F1E] hover:text-[#91501ecd] hover:border-b-2 cursor-pointer transition hover:border-[#914F1E]   font-bold mx-auto p-4'>
