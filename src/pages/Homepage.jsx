@@ -10,7 +10,7 @@ const Homepage = () => {
 
 
                 <img src="/graph.png"
-                    className="hidden sm:absolute bottom-0 right-[4rem] ease-linear blur-[50px] md:animate-pulse bg-red-300 "
+                    className="hidden sm:absolute bottom-0 z-0 right-[4rem] ease-linear blur-[50px] md:animate-pulse bg-red-300 "
                     alt="gradient1" />
 
                 <div className="absolute top-2 -left-40 md:top-3 z-0 md:left-1 opacity-[0.6] animate-bounce-once rotate-90 ease-linear blur-3xl  ">
