@@ -1,65 +1,131 @@
-import { useRef, useState } from 'react';
-import { ImCross } from "react-icons/im";
+import React, { useState } from 'react';
+import { ImCross } from 'react-icons/im';
 import { Link } from 'react-scroll';
 import { avatar, tags } from '../assets/data';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { FaZ } from 'react-icons/fa6';
 
 const Navbar = () => {
-    const [isOn, setisOn] = useState(false);
-    const navbar = useRef();
-    const mobileNav = useRef();
-
-    const { contextSafe } = useGSAP();
-    useGSAP(() => {
-        gsap.set(navbar.current, { y: '-100%' });
-        gsap.to(navbar.current, {
-            y: 0,
-            duration: 1,
-            delay: 0.4,
-            ease: 'power3.out'
-        });
-    });
+    const [isOn, setIsOn] = useState(false);
 
     return (
-        <>
-            <nav>
-                <div ref={navbar} className='flex relative bg-[#f5efee] w-auto shadow-md rounded-md m-1 p-3 md:px-32 justify-between items-center'>
-                    <div className='flex justify-center items-center'>
-                        <img src={avatar} height={50} width={50} alt="name" className='rounded-full object-cover' />
-                    </div>
-
-                    {/* Desktop Menu */}
-                    <div className='md:flex hidden z-30 justify-center items-center gap-5'>
-                        {tags.map((item, index) => (
-                            <Link to={item.link} smooth={500} key={index} 
-                                  className='uppercase hover:text-[#91501ecd] hover:border-b-2 transition hover:border-[#914F1E] cursor-pointer list-none font-bold text-[#914F1E]'>
+        <nav style={styles.navbarContainer}>
+            {/* Navbar header with avatar and hamburger menu */}
+            <div style={styles.navbar}>
+                <div style={styles.avatarContainer}>
+                    <img src={avatar} alt="Avatar" style={styles.avatarImage} />
+                </div>
+                
+                {/* Desktop Menu */}
+                <ul style={styles.desktopMenu}>
+                    {tags.map((item, index) => (
+                        <li key={index} style={styles.menuItem}>
+                            <Link to={item.link} smooth={500} duration={500} style={styles.menuLink}>
                                 {item.name}
                             </Link>
-                        ))}
-                    </div>
+                        </li>
+                    ))}
+                </ul>
 
-                    {/* Hamburger Icon */}
-                    <div className='block md:hidden cursor-pointer'>
-                        <img src="/menu.png" width={30} height={30} alt="hamburger" onClick={() => setisOn(!isOn)} />
-                    </div>
+                {/* Hamburger Icon for Mobile */}
+                <div style={styles.hamburgerIcon} onClick={() => setIsOn(!isOn)}>
+                    <img src="/menu.png" alt="Menu" width="30" height="30" />
                 </div>
+            </div>
 
-                {/* Mobile Menu */}
-                <div className={`bg-[#f5efee] absolute z-50 min-h-screen md:hidden w-full ${isOn ? "block" : "hidden"} flex flex-col gap-10 flex-wrap transition-opacity duration-300`}>
+            {/* Mobile Menu */}
+            {isOn && (
+                <div style={styles.mobileMenu}>
                     {tags.map((item, index) => (
-                        <Link to={item.link} onClick={() => setisOn(false)} smooth={400} key={index} 
-                              className='uppercase list-none text-[#914F1E] hover:text-[#91501ecd] hover:border-b-2 cursor-pointer transition hover:border-[#914F1E] font-bold mx-auto p-4'>
+                        <Link
+                            key={index}
+                            to={item.link}
+                            smooth={400}
+                            onClick={() => setIsOn(false)}
+                            style={styles.mobileMenuItem}
+                        >
                             {item.name}
                         </Link>
                     ))}
-                    <h1 className='absolute right-10 top-3 font-bold cursor-pointer text-[#914F1E]' onClick={() => setisOn(!isOn)}>
-                        <ImCross />
-                    </h1>
+                    <ImCross style={styles.closeIcon} onClick={() => setIsOn(false)} />
                 </div>
-            </nav>
-        </>
+            )}
+        </nav>
     );
+};
+
+// Custom styles
+const styles = {
+    navbarContainer: {
+        position: 'relative',
+        width: '100%',
+        zIndex:'40'
+    },
+    navbar: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '10px 20px',
+        backgroundColor: '#f5efee',
+        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+        borderRadius: '5px',
+    },
+    avatarContainer: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    avatarImage: {
+        width: '50px',
+        height: '50px',
+        borderRadius: '50%',
+        objectFit: 'cover',
+    },
+    desktopMenu: {
+        display: 'flex',
+        gap: '20px',
+        listStyle: 'none',
+        alignItems: 'center',
+    },
+    menuItem: {
+        fontWeight: 'bold',
+    },
+    menuLink: {
+        textDecoration: 'none',
+        color: '#914F1E',
+        textTransform: 'uppercase',
+        cursor: 'pointer',
+        paddingBottom: '5px',
+    },
+    hamburgerIcon: {
+        display: 'block',
+        cursor: 'pointer',
+    },
+    mobileMenu: {
+        position: 'absolute',
+        top: '100%',
+        left: 0,
+        width: '100%',
+        backgroundColor: '#f5efee',
+        padding: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        zIndex: 50,
+    },
+    mobileMenuItem: {
+        textDecoration: 'none',
+        color: '#914F1E',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        padding: '10px 0',
+        cursor: 'pointer',
+    },
+    closeIcon: {
+        position: 'absolute',
+        top: '10px',
+        right: '10px',
+        cursor: 'pointer',
+        color: '#914F1E',
+    },
 };
 
 export default Navbar;
