@@ -8,7 +8,7 @@ const Card = () => {
             link: "/linkedin.png"
         }, {
             src: "https://github.com/SUNIL-000/",
-            link: "/github-sign.png"
+            link: "/github.png"
         }, {
             src: "mailto:sunilsk2510@gmail.com",
             link: "/mail.png"
@@ -32,11 +32,11 @@ const Card = () => {
                     <p className="text-2xl md:text-5xl bg-gradient-to-tr  from-[#e26015]  to-[#e1be7e] bg-clip-text text-transparent">FullStack Developer</p>
                 </div>
                 <hr />
-                <div className="flex flex-row gap-2 md:gap-4 relative bottom-0">
+                <div className="flex flex-row gap-2  justify-center items-center relative bottom-0">
 
                     {
                         data?.map((data, index) => {
-                            return <Link to={data?.src} key={index} ><img src={data.link} height={30} width={30} alt="socialicon" /></Link>
+                            return <Link to={data?.src} className="shadow-md p-1 rounded-md " key={index} ><img src={data.link} height={30} width={30} alt="socialicon" /></Link>
                         })
                     }
 
