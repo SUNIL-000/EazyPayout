@@ -6,16 +6,13 @@ import Lottie from 'lottie-react';
 const Homepage = () => {
     return (
         <section>
-            <div className='w-full h-auto md:min-h-[85vh] md:relative mb-14 flex flex-col md:flex-row justify-around  items-center '>
+            <div className='w-full h-auto md:min-h-[85vh] relative mb-14 flex flex-col md:flex-row justify-around  items-center '>
 
 
-                <img src="/graph.png"
-                    className="hidden sm:absolute bottom-0 z-0 right-[4rem] ease-linear blur-[50px] md:animate-pulse bg-red-300 "
-                    alt="gradient1" />
 
-                <div className=" hidden absolute top-2 -left-40 md:top-3 z-0 md:left-1 opacity-[0.6] animate-bounce-once rotate-90 ease-linear blur-3xl  ">
+                {/* <div className="  absolute top-2 md:top-[9rem] md:left-[376px] z-0  opacity-[0.6] animate-bounce-once rotate-90 ease-linear blur-3xl  ">
                     <img src="/graph.png" alt="gradient1" />
-                </div>
+                </div> */}
 
                 {/* introduction part  */}
                 <div className='md:w-1/2 order-2 md:order-1 px-10 md:px-0  z-10'>

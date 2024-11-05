@@ -16,9 +16,9 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="flex gap-5 items-center">
+                <ul className="flex gap-5 items-center z-50">
                     {tags.map((item, index) => (
-                        <li key={index} className="font-bold uppercase text-[#914F1E] hover:text-[#91501ecd] cursor-pointer transition hover:border-b-2 hover:border-[#914F1E]">
+                        <li key={index} className="font-bold z-50 uppercase text-[#914F1E] hover:text-[#91501ecd] cursor-pointer transition hover:border-b-2 hover:border-[#914F1E]">
                             <Link to={item.link} smooth={500} duration={500}>
                                 {item.name}
                             </Link>
