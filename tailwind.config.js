@@ -6,9 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      animation: {
-        'ping-once': 'ping 1s ease-in-out 1', // Adjust timing as needed
-      },
+     
     },
   },
   plugins: [],
